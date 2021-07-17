@@ -71,10 +71,10 @@ body {
     margin-top: 5vh;
     margin-left: 7vw;
     color: #fff;
+    transition:0.5s;
 
 }
 .project-title h2 span{
-    
     transition: 0.5s;
 }
 .project-title h2 span:hover{
@@ -82,6 +82,23 @@ body {
                 0 0 20px #fff,
                 0 0 40px #fff;
     margin-right: 15px;
+}
+.project-title h2 .u-line{
+    display: block;
+    position:absolute;
+    background: #2894ff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height :1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.project-title h2:hover .u-line{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;;
 }
 
 .cards{
@@ -142,11 +159,12 @@ body {
     text-align: :center;
 
 }
-.content span{
+.s-c{
     display: flex;
     justify-content: center;
     margin-bottom:20px;
 }
+
 .content h3{
     font-size: 1.8em;
     color:rgba(255,255,255,0.5);
@@ -167,11 +185,79 @@ body {
     padding:8px 20px;
     background: #000;
     margin-top:15px;
-    border-radius: 20px;
     text-decoration:none;
     font-weight: 400;
     color: #fff;
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: 0.5s;
 }
+.content .s-c a span{
+    display: block;
+    position:absolute;
+    background: #2894ff;
+}
+/*Left side btn animation*/
+a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height :100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;;
+}
+/*Bottom side btn animation*/
+a span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height :1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;;
+}
+/*Right side btn animation*/
+a span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height :100%;
+    transform: scaleX(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(3){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;;
+}
+/*Top side btn animation*/
+a span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+a:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.5s;;
+}
+
+
+
