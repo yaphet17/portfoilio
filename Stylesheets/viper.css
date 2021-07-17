@@ -78,29 +78,9 @@ body {
     transition: 0.5s;
 }
 .project-title h2 span:hover{
-    text-shadow: 0 0 10px #fff,
-                0 0 20px #fff,
-                0 0 40px #fff;
+    
     margin-right: 15px;
 }
-.project-title h2 .u-line{
-    display: block;
-    position:absolute;
-    background: #2894ff;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height :1px;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s;
-}
-.project-title h2:hover .u-line{
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: transform 0.5s;;
-}
-
 .cards{
     display:flex;
     justify-content:center;
@@ -153,6 +133,23 @@ body {
     -moz-transform: translateY(-50px);
     transform: translateY(-50px);
     box-shadow:0px 40px 100px rgba(0,0,0.5);
+}
+.box .u-line{
+    display: block;
+    position:absolute;
+    background: #2894ff;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height :100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+.box:hover .u-line{
+    transform: scaleX(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
 }
 .content{
     padding:20px 20px 10px 20px;
@@ -211,7 +208,7 @@ a span:nth-child(1){
 a:hover span:nth-child(1){
     transform: scaleY(1);
     transform-origin: bottom;
-    transition: transform 0.5s;;
+    transition: transform 0.5s;
 }
 /*Bottom side btn animation*/
 a span:nth-child(2){
@@ -241,7 +238,7 @@ a span:nth-child(3){
 a:hover span:nth-child(3){
     transform: scaleX(1);
     transform-origin: left;
-    transition: transform 0.5s;;
+    transition: transform 0.5s;
 }
 /*Top side btn animation*/
 a span:nth-child(4){
@@ -258,6 +255,47 @@ a:hover span:nth-child(4){
     transform-origin: right;
     transition: transform 0.5s;;
 }
+.contacts{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+ul li{
+    list-style: none;
+    margin-right:20px;
+    margin-bottom: 50px;
+    transition:0.5s;
+}
+.curtain{
+    z-index: 3;
+    display: inline-block;
+    width:200px;
+    height:3px;
+    background-color: #2894ff;
+    transition:0.5s;
+}
+li:hover .curtain{
+    transform: translateY(147px);
+}
 
+.logo{
+    z-index: 1;
+    width:200px;
+    height: 150px;
+    filter: brightness(0.3);
+    transition:0.5s;
+}
+li:hover .logo{
+    filter: brightness(1);
+}
 
 
