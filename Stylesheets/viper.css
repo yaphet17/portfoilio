@@ -48,6 +48,9 @@ body {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+.active{
+    color:#2AA2D5;
+}
 
 /*Section styling*/
 .section{
@@ -78,7 +81,6 @@ body {
     transition: 0.5s;
 }
 .project-title h2 span:hover{
-    
     margin-right: 15px;
 }
 .cards{
@@ -248,7 +250,8 @@ a span:nth-child(4){
     height: 1px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.5s;
+    transition: transfor
+    m 0.5s;
 }
 a:hover span:nth-child(4){
     transform: scaleX(1);
@@ -257,19 +260,38 @@ a:hover span:nth-child(4){
 }
 .contacts{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+.contact-title{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+    text-align: left; 
+    margin-left: 7vw;
+    margin-bottom: 5vh;
+    color: #fff;
+    transition:0.5s;
+
+}
+.contact-title h1 span{
+    transition: 0.5s;
+}
+.contact-title h1 span:hover{
+    margin-right: 15px;
+}
 ul{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
+    justify-content: flex-start;
+    width:100%;
+    margin-left: 7vw;
 }
 ul li{
+    display: flex;
+    flex-direction: column;
     list-style: none;
     margin-right:20px;
     margin-bottom: 50px;
@@ -278,23 +300,47 @@ ul li{
 .curtain{
     z-index: 3;
     display: inline-block;
-    width:200px;
+    width:150px;
     height:3px;
-    background-color: #2894ff;
+    
     transition:0.5s;
 }
+/*Twitter logo*/
+.curtain-1{
+    background-color: #2894ff;
+}
+/*Gmail logo*/
+.curtain-2{
+    background-image: webkit-linear-gradient(to right,#4285F4,#C5221F,#EA4335,#FBBC04,#34A853);
+    background-image: moz-linear-gradient(to right,#4285F4,#C5221F,#EA4335,#FBBC04,#34A853);
+    background-image: linear-gradient(to right,#4285F4,#C5221F,#EA4335,#FBBC04,#34A853);
+}
+/*Telegram logo*/
+.curtain-3{
+    background-image: webkit-linear-gradient(to right,#2AA2D5,#fff,#2AA2D5);
+    background-image: moz-linear-gradient(to right,#2AA2D5,#fff,#2AA2D5);
+    background-image: linear-gradient(to right,#2AA2D5,#fff,#2AA2D5);
+}
+/*Instagram logo*/
+.curtain-4{
+    background-image: webkit-linear-gradient(to right,#FFB94F,#6E47C5,#DEC3E9,#773FC9,#C233AD);
+    background-image: moz-linear-gradient(to right,#FFB94F,#6E47C5,#DEC3E9,#773FC9,#C233AD);
+    background-image: linear-gradient(to right,#FFB94F,#6E47C5,#DEC3E9,#773FC9,#C233AD);
+}
 li:hover .curtain{
-    transform: translateY(147px);
+    transform: translateY(97px);
 }
 
 .logo{
     z-index: 1;
-    width:200px;
-    height: 150px;
+    width:150px;
+    height: 100px;
     filter: brightness(0.3);
     transition:0.5s;
 }
 li:hover .logo{
+    -webkit-filter: brightness(1);
+    -moz-filter: brightness(1);
     filter: brightness(1);
 }
 
