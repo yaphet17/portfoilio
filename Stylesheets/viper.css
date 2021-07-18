@@ -344,4 +344,18 @@ li:hover .logo{
     filter: brightness(1);
 }
 
+/*Style for about page*/
+.my-picture{
+    display: flex;
+    flex-wrap: wrap;
+    width:400px;
+    min-width:400px;
+    height:85vh;
+    overflow:hidden;
 
+}
+.my-picture img{
+    width:400px;
+    min-width:400px;
+    height:85vh;
+}
