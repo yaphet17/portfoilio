@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a {
   text-decoration: none;
@@ -57,11 +58,68 @@ body {
 }
 
 /*Section styling*/
+.body-header{
+    display: flex;
+    flex-direction: row;
+    height:350px;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    height:350px;   
+    position: relative;
+    right:100px;
+  }
+  
+  .typing-demo {
+    width: 23ch;
+    animation: typing 2s steps(23), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to{
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 40px #fff;
+     }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+    
+  }
+
+.pic-area{
+    display: flex;
+    justify-content: flex-end;
+    width:60%;
+}
+
+.pic-area .image-1{
+    width:500px;
+    height:350px;
+    position:relative;
+    
+}
 .section{
   display:flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .projects {
     display:flex;
     flex-direction:column;
@@ -74,7 +132,7 @@ body {
 .project-title h2{
     width:100%;
     text-align: left;
-    font-size:6em;
+    font-size:4em;
     margin-top: 5vh;
     margin-left: 7vw;
     color: #fff;
@@ -143,6 +201,8 @@ body {
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
     transform: translateY(-50px);
+    -webkit-box-shadow:0px 40px 100px rgba(0,0,0.5);
+    -moz-box-shadow:0px 40px 100px rgba(0,0,0.5);
     box-shadow:0px 40px 100px rgba(0,0,0.5);
 }
 .box .u-line{
@@ -304,7 +364,42 @@ a:hover span:nth-child(4){
     -moz-transition: transform 0.5s;
     transition: transform 0.5s;
 }
+.blog{
+    position:relative;
+    left:100px;
+    width:100%;
+    
+    
+}
+.blog .content{
+    display: flex;
+    flex-direction: row;
+}
+.blog h2{
+    text-align:left;
+    color:#fff;
+    line-height: 30px;
+    font-size:4em;
+    margin-bottom: 30px;
+}
+.blog .content p{
+    text-align:left;
+    color:#fff;
+    line-height: 30px;
+    width:60%;
+}
+
+.pic-area .image-2{
+    width:300px;
+    height:350px;
+    position:relative;
+    right:200px;
+    margin:0;
+    
+}
 .contacts{
+    position: relative;
+    top:50px;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -313,7 +408,7 @@ a:hover span:nth-child(4){
 }
 .contact-title{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width:100%;
     text-align: left; 
     margin-left: 7vw;
@@ -321,6 +416,12 @@ a:hover span:nth-child(4){
     color: #fff;
     transition:0.5s;
 
+}
+.contact-title h2 span{
+    transition: 0.5s;
+}
+.contact-title h2 span:hover{
+    margin-right: 15px;
 }
 .contact-title h1 span{
     transition: 0.5s;
@@ -331,7 +432,7 @@ a:hover span:nth-child(4){
 .curtain-list{
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     width:100%;
     margin-left: 7vw;
 }
@@ -346,7 +447,7 @@ a:hover span:nth-child(4){
 .curtain{
     z-index: 3;
     display: inline-block;
-    width:150px;
+    width:80px;
     height:3px;
     transition:0.5s;
 }
@@ -372,45 +473,47 @@ a:hover span:nth-child(4){
     background-image: moz-linear-gradient(to right,#FFB94F,#6E47C5,#DEC3E9,#773FC9,#C233AD);
     background-image: linear-gradient(to right,#FFB94F,#6E47C5,#DEC3E9,#773FC9,#C233AD);
 }
-curtain-list-el:hover .curtain{
-    -webkit-transform: translateY(97px);
-    -moz-transform: translateY(97px);
-    transform: translateY(97px);
+.curtain-list-el:hover .curtain{
+    -webkit-transform: translateY(47px);
+    -moz-transform: translateY(47px);
+    transform: translateY(47px);
 }
 
 .logo{
     z-index: 1;
-    width:150px;
-    height: 100px;
+    width:80px;
+    height: 50px;
     filter: brightness(0.3);
     transition:0.5s;
 }
-li:hover .logo{
+.curtain-list-el:hover .logo{
     -webkit-filter: brightness(1);
     -moz-filter: brightness(1);
     filter: brightness(1);
 }
 
 /*Style for about page*/
+/*
 .my-picture{
     display: flex;
     flex-wrap: wrap;
     width:100vw;
     min-width:400px;
-    height:40vh;
+    height:60vh;
     overflow:hidden;
-
+   
 }
 .my-picture img{
-    width:100vw;
+    width:100%;
     min-width:400px;
-    height:50vh;
-}
-
+    height:60vh;
+    box-shadow: 0 0 8px 8px black inset;
+}*/
+/*Style for about page*/
 .about-detail div{
-    padding-right: 0px;
+   padding-right: 0px;
    width:300px;
-   height:210px;
+   height:240px;
    color:#fff;
    transition:0.5s ease-in-out;
 }
@@ -421,6 +524,7 @@ li:hover .logo{
    -webkit-transform: scaleY(1.2);
    -moz-transform: scaleY(1.2);
    transform: scaleY(1.2);
+
 }
 .about-detail h2{
     margin-bottom: 10px;
@@ -432,6 +536,7 @@ li:hover .logo{
 .about-detail span{
     opacity: 0.4;
 }
+
 .education h2{
     color:#F1E228;
 }
@@ -450,5 +555,71 @@ li:hover .logo{
 .hoby h2{
     color:#1220FE;
 }
+.pic-area .image-3{
+    width:400px;
+    height:350px;
+    position:relative;
+    right:200px;
+    margin:0;
+    
+}
+/*Style for contact page*/
+.contact-page{
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+.contact-page .contact-title{
+    justify-content: center;
+}
+.contact-page .curtain-list{
+    justify-content: center;
+}
+.contact-page .curtain{
+    width:150px;
+}
+.contact-page .curtain-list-el:hover .curtain{
+    -webkit-transform: translateY(97px);
+    -moz-transform: translateY(97);
+    transform: translateY(97px);
+}
+.contact-page .logo{
+    width:150px;
+    height:100px;
+}
 
-
+/*Making all page responsive*/
+@media screen and (max-width: 740px){
+    .body-header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .wrapper{
+        font-size: 16px;
+    }
+    .type-demo{
+        font-size: 1.5em;
+    }
+    .blog .content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .project-title h2{
+        font-size: 3em;
+    }
+    .blog h2{
+        font-size: 3em;
+    }
+    .pic-area .image-2{
+        right:0;
+    }
+    .pic-area .image-3{
+        right:0;
+    }
+    .contact-page .curtain-list{
+        flex-direction: column;
+    }
+    .contact-page .contact-title h1{
+        font-size:25px;
+    }
+}
