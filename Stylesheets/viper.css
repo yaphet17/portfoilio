@@ -402,7 +402,6 @@ a:hover span:nth-child(4){
     top:50px;
     display:flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -410,7 +409,6 @@ a:hover span:nth-child(4){
     display: flex;
     justify-content: center;
     width:100%;
-    text-align: left; 
     margin-left: 7vw;
     margin-bottom: 5vh;
     color: #fff;
@@ -590,36 +588,73 @@ a:hover span:nth-child(4){
 
 /*Making all page responsive*/
 @media screen and (max-width: 740px){
+    /*Home page*/
     .body-header{
+        width:100%;
+        padding:0;
         flex-direction: column;
         justify-content: center;
     }
     .wrapper{
+        width:100%;
         font-size: 16px;
+        right:0;
     }
-    .type-demo{
-        font-size: 1.5em;
+    .typing-demo{
+        font-size: 1.7em;
     }
-    .blog .content{
-        flex-direction: column;
+    .pic-area{
+        width:100%;
         justify-content: center;
     }
-    .project-title h2{
-        font-size: 3em;
+    .pic-area .image-1{
+        width:400px;
+        height:250px;
+        position:relative;
+        
     }
-    .blog h2{
+    .project-title h2{
         font-size: 3em;
     }
     .pic-area .image-2{
         right:0;
     }
-    .pic-area .image-3{
-        right:0;
+    /*About me page*/
+    .blog h2{
+        font-size: 3em;
     }
+    .blog .content{
+        flex-direction: column;
+        justify-content: flex-start;
+        width:100%;
+        padding:0;
+    }
+    .blog .content .pic-area{
+        justify-content: flex-start;
+    }
+    
+    .pic-area .image-3{
+        width:300px;
+        height:250px;
+        right:0;
+        left:0;
+        margin: 0;
+    }
+    /*Contact page*/
+    .contact-page .contacts{
+        width:100%;
+    }
+    .contact-title{
+        font-size:20px;
+        margin-left:0;
+    }
+    .contacts .contact-title h1{
+        font-size:20px;
+    }
+
     .contact-page .curtain-list{
         flex-direction: column;
+        margin-left: 0;
     }
-    .contact-page .contact-title h1{
-        font-size:25px;
-    }
+    
 }
