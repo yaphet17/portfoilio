@@ -11,10 +11,12 @@
         <div class='container'>
         <div class='header'>
             <div class='nav-box'>
-                <a href='index.html' class='nav-btn'>Home</a>
-                <a href='about.html'  class='nav-btn'>About</a>
-                <a href='contacts.html'  class='nav-btn'>Contacts</a>
-            </div>
+                <a href='index.html' class='nav-btn'>Home<span></span><span></span></a>
+                    <a href='about.html'  class='nav-btn'>About<span></span><span></span></a>
+                    <a href='contacts.html'  class='nav-btn'>Contacts<span></span><span></span></a>
+                    <div class='cursor'></div>
+
+                </div>
         </div>
         <div class='section contact-page'>
             <div class='contacts'>
@@ -32,6 +34,20 @@
             </div>
 
         </div>
+        <div class='cursor'></div>
         </div>
+        <script>
+            function init(){
+             cursor=document.querySelector('.cursor');
+             document.addEventListener('mousemove',trackCursor,false);
+     
+             }
+ 
+             function trackCursor(e){
+                 cursor.style.left=e.pageX+'px';
+                 cursor.style.top=e.pageY+'px';
+             }
+             window.addEventListener('load',init,false);
+         </script>
     </body>
 </html>

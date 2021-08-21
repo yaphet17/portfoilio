@@ -11,9 +11,10 @@
         <div class='container'>
         <div class='header'>
             <div class='nav-box'>
-                <a href='index.html' class='nav-btn'>Home</a>
-                <a href='about.html'  class='nav-btn'>About</a>
-                <a href='contacts.html'  class='nav-btn'>Contacts</a>
+                <a href='index.html' class='nav-btn'>Home<span></span><span></span></a>
+                <a href='about.html'  class='nav-btn'>About<span></span><span></span></a>
+                <a href='contacts.html'  class='nav-btn'>Contacts<span></span><span></span></a>
+               <div class='cursor'></div>
             </div>
         </div>
         <div class='section'>
@@ -23,19 +24,22 @@
             </div>
             <div class="wrapper">
                 <div class="typing-demo">
-                  A Young tech Enthusiast
+                  A Young tech Enthusiast.
                 </div>
             </div>
             </div>
             <div class='projects'>
                 <div class='project-title'><h2><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h2></div>
                 <div class='cards'>
-               
                 <div class='card'>
                     <div class='box'>
                         <div class='content'>
                             <span class='s-c'><h3>Project 1</h3></span>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita debitis omnis officiis recusandae neque. Blanditiis quis voluptatum doloremque fuga quibusdam illum, totam ullam ex exercitationem repellat eum accusamus, quas natus.</p>
+                            <p>
+                                An offline club management system that can register members,take attendance,promote members to
+                                comittee and notify comittees about events.It is designed by Java,Mysql database,spring security,
+                                Javafx GUI and CSS.
+                            </p>
                             <span class='s-c'><a href='#'>
                                 <span></span>
                                 <span></span>
@@ -51,7 +55,10 @@
                     <div class='box'>
                         <div class='content'>
                             <span class='s-c'><h3>Project 2</h3></span>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita debitis omnis officiis recusandae neque. Blanditiis quis voluptatum doloremque fuga quibusdam illum, totam ullam ex exercitationem repellat eum accusamus, quas natus.</p>
+                            <p>An online passport service system that allows applicants to schedule appointment,follow their passport status and  generate unique
+                                payment code so they can pay their service fees via online banking.It is designed using HTML,CSS,Jquery in the fronend and
+                                PHP and Mysql database in the back end.
+                            </p>
                             <span class='s-c'><a href='#'>
                                 <span></span>
                                 <span></span>
@@ -66,7 +73,9 @@
                     <div class='box'>
                         <div class='content'>
                             <span class='s-c'><h3>Project 3</h3></span>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita debitis omnis officiis recusandae neque. Blanditiis quis voluptatum doloremque fuga quibusdam illum, totam ullam ex exercitationem repellat eum accusamus, quas natus.</p>
+                            <p>Anfinet,a system that helps students to get non copyright course materials easily and to help understand more about the course 
+                                by providing course description about every avilable course.It is designed using HTML,CSS,Vanila Javacript in the fronend and
+                                PHP and Mysql database in the back end.</p>
                             <span class='s-c'><a href='#'>
                                 <span></span>
                                 <span></span>
@@ -83,12 +92,13 @@
             <div class='blog'>
                 <div class='blog-title'><h2 >Blog</h2></div>
                 <div class='content'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quod minima incidunt quibusdam 
-                        tempore accusantium eum quidem pariatur quas, eveniet at veniam eos aperiam dicta? Officiis temporibus
-                         hic mollitia tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, veritatis voluptatum,
-                         quisquam, sapiente deleniti ad ipsum nesciunt quae quibusdam quo maxime. Dicta quibusdam eaque excepturi temporibus
-                         animi harum aliquam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sequi placeat adipisci, 
-                         saepe temporibus dolorum ab aliquam. Ipsam vero aperiam obcaecati temporibus! Amet sint ea iure! Expedita corporis soluta saepe!</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque facere, ipsum consequuntur qui est in similique natus
+                         autem doloribus ratione numquam quo delectus exercitationem sint culpa dolorum quia iure rem. Lorem ipsum dolor sit amet 
+                         consectetur, adipisicing elit. Aperiam provident quam voluptatum voluptas quisquam ipsa magni, suscipit perferendis labore 
+                         assumenda officia dolores laudantium impedit neque mollitia molestiae deserunt veritatis corrupti?Lorem ipsum dolor sit amet
+                         consectetur adipisicing elit. Accusamus vel commodi autem at itaque unde praesentium exercitationem fugiat. Illo aspernatur esse,
+                          officiis libero provident harum pariatur iusto atque consequatur molestiae.
+                    </p>
                     <div class='pic-area'><img src='Images/photos/image-2.png' class='image-2'></div>
                 </div>
             </div>
@@ -104,6 +114,18 @@
                 </ul>
             </div>
         </div>
+       
     </div>
+    <script>
+        function init(){
+		    cursor=document.querySelector('.cursor');
+		    document.addEventListener('mousemove',trackCursor,false);
+	    }
+	    function trackCursor(e){
+		    cursor.style.left=e.pageX+'px';
+		    cursor.style.top=e.pageY+'px';
+	    }
+	    window.addEventListener('load',init,false);
+    </script>
     </body>
 </html>

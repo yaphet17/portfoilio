@@ -11,14 +11,13 @@
         <div class='container'>
             <div class='header'>
                 <div class='nav-box'>
-                    <a href='index.html' class='nav-btn'>Home</a>
-                    <a href='about.html'  class='nav-btn'>About</a>
-                    <a href='contacts.html'  class='nav-btn'>Contacts</a>
+                    <a href='index.html' class='nav-btn'>Home<span></span><span></span></a>
+                    <a href='about.html'  class='nav-btn'>About<span></span><span></span></a>
+                    <a href='contacts.html'  class='nav-btn'>Contacts<span></span><span></span></a>
+                    <div class='cursor'></div>
                 </div>
             </div>
             <div class='section'>
-                <div class='my-picture'>
-                </div>
                 <div class='about-detail cards'>
                     <div class='education card'>
                         <ul class='content'>
@@ -28,7 +27,10 @@
                             <li>Assosa Preparatory School <span>11-12</span></li>
                             <li>Adama Science and Technology University <span>Computer science and engineering(on study)</span></li>
                         </ul>
+                        
+                        
                     </div>
+                   
                     <div class='certification card'>
                         <ul class='content'>
                             <h2>Certification</h2>
@@ -36,6 +38,7 @@
                             <li>Mobile Application with AI associate <span>Gebeya Talent</span></li>
                             <li>Mobile Application Development with kotlin <span>Google</span></li>
                         </ul>
+                        
                     </div>
                     <div class='skills card'>
                         <ul  class='content'>
@@ -82,6 +85,20 @@
                         </div>
                     </div>
                 </div>
+      
             </div>
+            <script>
+               function init(){
+		        cursor=document.querySelector('.cursor');
+		        document.addEventListener('mousemove',trackCursor,false);
+		
+	            }
+	
+	            function trackCursor(e){
+		            cursor.style.left=e.pageX+'px';
+		            cursor.style.top=e.pageY+'px';
+	            }
+	            window.addEventListener('load',init,false);
+            </script>
     </body>
 </html>

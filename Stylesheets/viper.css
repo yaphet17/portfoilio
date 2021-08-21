@@ -47,15 +47,90 @@ body {
   color: #dddddd;
   transition: all 0.2s ease-in-out;
   font-size: 18px;
+  position:relative;
 }
 .nav-btn:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+  color: #E5EB14;
+  
 }
-.active{
-    color:#2AA2D5;
+.nav-btn span:first-child:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:8px;
+    height:8px;
+    border-top:2px solid #E5EB14;
+    border-left: 2px solid #E5EB14;
+    background: transparent;
+    transition:.2s;
+    opacity:0;
 }
+.nav-btn:hover span:first-child:before{
+    top:-5px;
+    left:-5px;
+    opacity:1;
+}
+.nav-btn span:first-child:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:8px;
+    height:8px;
+    border-top:2px solid #E5EB14;
+    border-right: 2px solid #E5EB14;
+    background: transparent;
+    transition:.2s;
+    opacity:0;
+
+}
+.nav-btn:hover span:first-child:after{
+    top:-5px;
+    right:-5px;
+    opacity: 1;
+}
+.nav-btn span:last-child:before{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:8px;
+    height:8px;
+    border-bottom:2px solid #E5EB14;
+    border-left: 2px solid #E5EB14;
+    background: transparent;
+    transition:.2s;
+    opacity:0;
+}
+.nav-btn:hover span:last-child:before{
+    bottom:-5px;
+    left:-5px;
+    opacity:1;
+}
+.nav-btn span:last-child:after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:8px;
+    height:8px;
+    border-bottom:2px solid #E5EB14;
+    border-right: 2px solid #E5EB14;
+    background: transparent;
+    transition:.2s;
+    opacity:0;
+
+}
+.nav-btn:hover span:last-child:after{
+    bottom:-5px;
+    right:-5px;
+    opacity:1;
+}
+
 
 /*Section styling*/
 .body-header{
@@ -75,8 +150,8 @@ body {
   }
   
   .typing-demo {
-    width: 23ch;
-    animation: typing 2s steps(23), blink .5s step-end infinite alternate;
+    width: 24ch;
+    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -139,16 +214,18 @@ body {
     transition:0.5s;
 
 }
+.project-title h2:hover{
+    
+
+}
 .project-title h2 span{
     transition: 0.5s;
 }
 .project-title h2 span:hover{
-    text-shadow: 0 0 10px #fff,
-                 0 0 20px #fff,
-                 0 0 40px #fff,
-                 0 0 80px #fff;
-
     margin-right: 15px;
+    text-shadow:0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff;
 }
 .cards{
     display:flex;
@@ -208,7 +285,7 @@ body {
 .box .u-line{
     display: block;
     position:absolute;
-    background: #2894ff;
+    background: #E5EB14;
     left: 0;
     bottom: 0;
     width: 3px;
@@ -268,8 +345,9 @@ body {
 .content .s-c a span{
     display: block;
     position:absolute;
-    background: #2894ff;
+    background: #E5EB14;
 }
+
 /*Left side btn animation*/
 a span:nth-child(1){
     left: 0;
@@ -365,7 +443,6 @@ a:hover span:nth-child(4){
     transition: transform 0.5s;
 }
 .blog{
-    position:relative;
     left:100px;
     width:100%;
     
@@ -490,6 +567,23 @@ a:hover span:nth-child(4){
     filter: brightness(1);
 }
 
+
+.nav-box:hover .cursor{
+	position:absolute;
+	pointer-events:none;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background-color:#E5EB14;
+	transform:translate(-50%,-50%);
+	mix-blend-mode:difference;
+}
+.nav-btn:hover ~ .cursor{
+    transform:scale(3);
+}
+
+
+
 /*Style for about page*/
 /*
 .my-picture{
@@ -508,7 +602,7 @@ a:hover span:nth-child(4){
     box-shadow: 0 0 8px 8px black inset;
 }*/
 /*Style for about page*/
-.about-detail div{
+.about-detail div:not(.cursor){
    padding-right: 0px;
    width:300px;
    height:240px;
@@ -616,6 +710,7 @@ a:hover span:nth-child(4){
     .project-title h2{
         font-size: 3em;
     }
+    
     .pic-area .image-2{
         right:0;
     }
